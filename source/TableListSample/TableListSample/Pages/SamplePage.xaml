@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TableListSample.Pages.SamplePage"
+             xmlns:local="clr-namespace:TableListSample;assembly=TableListSample"
+             xmlns:controls="clr-namespace:TableListSample.Controls;assembly=TableListSample"
+             BackgroundColor="White" >
+  <ListView ItemsSource="{Binding SampleList}"
+            HasUnevenRows="True"
+            SeparatorColor="Black" >
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <controls:TableRow BindingContext="{Binding .}" />
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>
